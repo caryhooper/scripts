@@ -1,0 +1,11 @@
+FruityWifi Notes
+
+- Download Raspbian (I used NOOBS)
+
+- Reverse port forward to cloud...
+- ssh -R 1991:127.0.0.1:1991 ubuntu@www.hooperlabs.xyz -nNT
+
+No GUI, so need headless install.
+- add silentinstall to startup.cmdline
+- /os/Raspbian/partition_setup.sh <-- added commands to create wpa_supplicant file.
+- add wpa_supplicant file to root directory.
