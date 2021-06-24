@@ -38,13 +38,13 @@ def download_directory(url,storage_path):
 	#Get remote directory listing via HTTP (uses 3rd party module htmllistparse)
 	cwd, listing = htmllistparse.fetch_listing(url, timeout=30)
 	#Filter listing for executable scripts.  Uses a feature in Python called list comprehension
-	listing = [i for i in listing if not ('.py' in i.name or '.sh' in i.name )]
+	listing = [i.name for i in listing if not ('.py' in i.name or '.sh' in i.name )]
 	print(f"Listing: {listing}")
 	#Iterate through all served files/directories to determine what is a file and what is a directory
 	for thing in listing:
 		#Determine if object is directory with / in name
-		if '/' in thing.name:
-			directory = thing.name
+		if '/' in thing:
+			directory = thing
 			directorypath = f"{storage_path}/{directory}"
 			directory_noslash = directory.replace(os.path.sep,'')
 			newurl = f"{url}/{directory_noslash}"
@@ -58,7 +58,7 @@ def download_directory(url,storage_path):
 			os.chdir(storage_path)
 		else:
 			#Else... item is a file to download
-			file = thing.name
+			file = thing
 			#Check if we've downloaded a file already.  If so, skip it!
 			if file not in local_filenames:
 				download_string = f"{url}/{file}"
