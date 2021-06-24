@@ -64,6 +64,8 @@ def download_directory(url,storage_path):
 				download_string = f"{url}/{file}"
 				#Call download_file to download the single file chunk by chunk.
 				download_file(download_string,storage_path)
+			else:
+				print(f"Already downloaded {file}")
 
 
 #Initial call to download_directory (recursive function)
