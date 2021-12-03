@@ -51,6 +51,13 @@ def dec2bin(value):
 def bin2dec(value):
     return str(int(value.decode(),base=2)).encode()
 
+def bin2dec_alt(self,bitstring):
+    #input a string of 1s and 0s, output an int
+    return int(bitstring,2)
+
+def dec2bin_alt(self,my_int):
+    #input an int and output a string of 1s and 0s
+    return "{0:b}".format(my_int)
 
 def do_convert(fromtype,totype,value):
     if fromtype == totype:
