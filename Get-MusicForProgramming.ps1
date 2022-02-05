@@ -6,6 +6,8 @@
 
 #Change This
 $outputFolder = "C:\Users\carye\Music"
+#Collecting currently-downloaded files in folder
+$filenames = Get-ChildItem $outputFolder |  %{$_.name}
 
 #Request the main page to find all of the links
 $rep = Invoke-WebRequest -URI http://www.musicforprogramming.net/latest
@@ -42,8 +44,14 @@ Foreach($i in $rep.Links){
 
                #Request all files and download to outputFolder
                Write-Host "Downloading $($url)" #debugging
-               Invoke-WebRequest $url -OutFile "$($outputFolder)\$($filename)"
-           
+
+               #Adding check to see if file has already been downloaded.
+               if ($filenames.IndexOf($filename) -eq -1){
+                   Invoke-WebRequest $url -OutFile "$($outputFolder)\$($filename)"
+               }
+               else{
+                   Write-Host "Skipping $filename. Already downloaded..."
+               }
             }
        }
     }
