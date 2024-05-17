@@ -13,4 +13,5 @@ while len(objects) > 0:
 	last = objects.pop()
 	mydata = zlib.decompress(last.strip(b'\r\n'))
 	print(str(mydata, errors='replace'))
-	#sys.exit(0)  #Remove this if the object isn't the last one.
+
+	sys.exit(0)  #Remove this if the object isn't the last one.
