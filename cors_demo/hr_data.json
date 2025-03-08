@@ -1,0 +1,52 @@
+[
+  {
+    "employee_id": "EMP001",
+    "name": "John Smith",
+    "address": "123 Maple St, Springfield, IL 62701",
+    "pay": 65000.0,
+    "work_phone": "(217) 555-0100",
+    "email": "john.smith@fakecompany.com",
+    "bank_account": "1234567890",
+    "ssn": "123-45-6789"
+  },
+  {
+    "employee_id": "EMP002",
+    "name": "Jane Doe",
+    "address": "456 Oak Ave, Springfield, IL 62702",
+    "pay": 72000.0,
+    "work_phone": "(217) 555-0200",
+    "email": "jane.doe@fakecompany.com",
+    "bank_account": "2345678901",
+    "ssn": "234-56-7890"
+  },
+  {
+    "employee_id": "EMP003",
+    "name": "Bob Johnson",
+    "address": "789 Pine Rd, Springfield, IL 62703",
+    "pay": 58000.0,
+    "work_phone": "(217) 555-0300",
+    "email": "bob.johnson@fakecompany.com",
+    "bank_account": "3456789012",
+    "ssn": "345-67-8901"
+  },
+  {
+    "employee_id": "EMP004",
+    "name": "Alice Brown",
+    "address": "321 Elm St, Springfield, IL 62704",
+    "pay": 85000.0,
+    "work_phone": "(217) 555-0400",
+    "email": "alice.brown@fakecompany.com",
+    "bank_account": "4567890123",
+    "ssn": "456-78-9012"
+  },
+  {
+    "employee_id": "EMP005",
+    "name": "Mike Wilson",
+    "address": "654 Cedar Ln, Springfield, IL 62705",
+    "pay": 62000.0,
+    "work_phone": "(217) 555-0500",
+    "email": "mike.wilson@fakecompany.com",
+    "bank_account": "5678901234",
+    "ssn": "567-89-0123"
+  }
+]
